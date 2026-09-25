@@ -33,7 +33,7 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}
 td,th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left}
 footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 @media print{.tabs{display:none}section{box-shadow:none;break-inside:avoid}}
-.back{position:fixed;right:14px;bottom:18px;z-index:10;background:#44507a;color:#fff;border:none;border-radius:999px;padding:10px 16px;font-size:.95rem;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;font-family:inherit}@media print{.back{display:none}}</style>
+.back{position:fixed;right:14px;bottom:18px;z-index:10;background:#44507a;color:#fff;border:none;border-radius:999px;padding:10px 16px;font-size:.95rem;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;font-family:inherit}@media print{.back{display:none}}.step{display:inline-block;font-size:.75rem;padding:1px 8px;border-radius:6px;background:#eee;color:#444;margin-right:6px;vertical-align:1px;font-weight:600}</style>
 </head>
 <body>
 <div class="wrap">
@@ -51,6 +51,7 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 ③ 單身證明從發出日起算只有 <strong>6 個月</strong>效期，拿到就盡快驗證、盡快登記。
 </div>
 
+<div class="key" style="border-left-color:#9a4f2f"><strong>怎麼看順序</strong><br>每一項前面的「第 N 步」是兩人合起來的時間順序，從第 1 步照著做就好。同一個數字的項目，是同一個時間點要一起完成的。</div>
 <nav class="tabs">
 <a class="t-me" href="#me">【我】臺灣方</a>
 <a class="t-pt" href="#pt">【伴侶】香港方</a>
@@ -62,11 +63,12 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 <h2>【我】臺灣方</h2>
 <div class="progress" data-for="me"></div>
 <ul class="check" data-group="me">
-<li><label><input type="checkbox">國民身分證正本</label></li>
-<li><label><input type="checkbox">戶口名簿</label></li>
-<li><label><input type="checkbox">印章（或現場簽名）</label></li>
-<li><label><input type="checkbox"><span>身分證規格彩色照片 1 張<span class="detail">最近 2 年內拍的，用來換發新身分證（也可以上傳數位相片）</span></span></label></li>
-<li><label><input type="checkbox"><span>規費<span class="detail">換身分證 NT$50、換戶口名簿 NT$30，結婚證明書每份 NT$100（建議中英文各申請一份）</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 7 步</span>準備結婚書約<span class="detail">可在戶政所網站下載或現場拿。要寫雙方姓名、出生日期、證件號碼、地址（伴侶填香港地址）</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 9 步</span>身分證規格彩色照片 1 張<span class="detail">最近 2 年內拍的，用來換發新身分證</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 11 步</span>登記當天帶：國民身分證正本</span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 11 步</span>登記當天帶：戶口名簿</span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 11 步</span>登記當天帶：印章（或現場簽名）</span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 11 步</span>登記當天帶：規費<span class="detail">換身分證 NT$50、換戶口名簿 NT$30；結婚證明書每份 NT$100（建議中英文各一份）</span></span></label></li>
 </ul>
 </section>
 
@@ -74,13 +76,14 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 <h2>【伴侶】香港方</h2>
 <div class="progress" data-for="pt"></div>
 <ul class="check" data-group="pt">
-<li><label><input type="checkbox"><span>香港特區護照＋香港永久性居民身分證<span class="detail">兩個都帶</span></span></label></li>
-<li><label><input type="checkbox"><span>申請「無結婚紀錄證明書」（香港入境處，表格 MR35）<span class="detail">可親自到婚姻登記處、郵寄或網上申請。一般需時 7 個工作天。費用為查紀錄時付 HK$140，領證明時再付 HK$680。<br>曾經結婚、已離婚的話：改辦「結婚紀錄證明」＋「絕對判令證明書」。</span></span></label></li>
-<li><label><input type="checkbox"><span>送台北經濟文化辦事處（香港）驗證<span class="detail">本人親辦，不收郵寄。地址是灣仔港灣道 18 號中環廣場 49 樓 4907 室，電話 (852) 2887-5011。<br>週一到週五 9:00–12:30 收件，14:00–17:00 領件。普通件 HK$120、2 個工作天；速件 HK$180、1 個工作天；只收現金。</span></span></label></li>
-<li><label><input type="checkbox"><span>確認單身證明還在 6 個月效期內<span class="detail">辦事處可能要求更新，驗證前可以先打電話確認</span></span></label></li>
-<li><label><input type="checkbox"><span>中文譯本＋台灣公證人認證<span class="tag">視情況</span><span class="detail">證明書只有英文時才需要</span></span></label></li>
-<li><label><input type="checkbox"><span>外籍配偶取用中文姓名聲明書<span class="tag">視情況</span><span class="detail">護照上已有中文姓名的話通常不用，以戶政所認定為準</span></span></label></li>
-<li><label><input type="checkbox"><span>入境台灣的證件<span class="detail"><b>只來辦登記：</b>網簽，免費、停留 30 天、不能延期。<br><b>婚後想直接在台申請居留：</b>建議改用入出境許可證（單次 NT$600，審核 5 個工作天，停留 3 個月，可延期一次）。台北經濟文化辦事處明文規定：用網簽入境的人不能在台申請居留。</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 2 步</span>線上申請入出境許可證（不要用網簽）<span class="detail">單次 NT$600，有效 6 個月，審核約 5 個工作天，辦事處建議預留 1～2 個月。核准後 30 天內要線上繳費。用網簽入境的人不能在台申請居留（台北經濟文化辦事處明文規定），所以之後要辦依親居留就一定要用這個。</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 3 步</span>向香港入境處申請「無結婚紀錄證明書」（表格 MR35）<span class="detail">可親自、郵寄或網上申請，一般 7 個工作天。查紀錄時付 HK$140，領證明時付 HK$680。從發出日起 6 個月內要完成結婚登記。曾經離婚的，改辦「結婚紀錄證明」＋「絕對判令證明書」。</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 4 步</span>親自送台北經濟文化辦事處（香港）驗證<span class="detail">灣仔港灣道 18 號中環廣場 49 樓 4907 室，(852) 2887-5011。週一到週五 9:00–12:30 收件，14:00–17:00 領件。普通件 HK$120、2 個工作天；速件 HK$180、1 個工作天；只收現金。不收郵寄。<br>同一趟可以順便領依親居留要用的良民證推薦函（見依親居留頁第 1 步）。</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 5 步</span>中文譯本＋台灣公證人認證<span class="tag">視情況</span><span class="detail">證明書只有英文時才需要</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 6 步</span>外籍配偶取用中文姓名聲明書<span class="tag">視情況</span><span class="detail">護照上已有中文姓名的話通常不用，以戶政所認定為準</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 10 步</span>持入出境許可證入境台灣<span class="detail">入境後可停留 3 個月，可延期 1 次 3 個月</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 11 步</span>登記當天帶：香港特區護照＋香港永久性居民身分證</span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 11 步</span>登記當天帶：驗證過的無結婚紀錄證明書（和譯本）</span></label></li>
 </ul>
 </section>
 
@@ -88,12 +91,10 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 <h2>兩人一起</h2>
 <div class="progress" data-for="both"></div>
 <ul class="check" data-group="both">
-<li><label><input type="checkbox"><span>結婚書約<span class="detail">可在戶政所網站下載或現場拿。要寫雙方姓名、出生日期、證件號碼、地址（伴侶填香港地址）</span></span></label></li>
-<li><label><input type="checkbox"><span>2 位證人簽名<span class="detail">要成年，而且真的知道你們要結婚</span></span></label></li>
-<li><label><input type="checkbox"><span>預約日期、一起到戶政所<span class="detail">可以在結婚日前 3 個辦公日內先辦，並指定生效日</span></span></label></li>
-<li><label><input type="checkbox"><span>出發前先打電話給要去的戶政所確認細節</span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 1 步</span>選定登記日期和要去的戶政事務所，打電話確認文件<span class="detail">全國任一戶政所都可以辦，各所細節可能不同。可以在結婚日前 3 個辦公日內先辦，並指定生效日</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 8 步</span>請 2 位證人在結婚書約上簽名<span class="detail">要成年，而且真的知道你們要結婚</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 12 步</span>一起親自到戶政所辦結婚登記<span class="detail">港配結婚沒有例行的法定面談，但個案仍可能被約談或查證。辦完順便申請登記了配偶資料的戶籍謄本，依親居留會用到</span></span></label></li>
 </ul>
-<p class="detail" style="margin-top:10px">港配結婚沒有例行的法定面談（面談是陸配的規定），但個案仍可能被約談或查證。</p>
 </section>
 
 

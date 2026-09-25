@@ -1,14 +1,13 @@
 // 勾選保存與同步：本機 localStorage + Google 試算表（SYNC_URL）
-const SYNC_URL = ''; // 填入 Apps Script 網頁應用程式網址
+const SYNC_URL = 'https://script.google.com/macros/s/AKfycbz5veLASgbL_BTn7BaUJE-149fNsdjp2jk17RQCYHSCfivQMyxRFvioBF08cW-Yx0BB/exec'; // 填入 Apps Script 網頁應用程式網址
 (function(){
   const page = location.pathname.split('/').pop().replace('.html','') || 'index';
   const LKEY = 'lp-check-' + page;
   const boxes = [...document.querySelectorAll('ul.check input[type=checkbox]')];
   const idOf = b => {
-    const lab = b.closest('label');
-    const span = lab.querySelector(':scope > span');
-    const node = span ? span.childNodes[0] : lab.childNodes[1];
-    return (node ? node.textContent : lab.textContent).trim().slice(0,80);
+    const lab = b.closest('label').cloneNode(true);
+    lab.querySelectorAll('.step,.detail,.tag,input').forEach(x => x.remove());
+    return lab.textContent.replace(/\s+/g,' ').trim().slice(0,80);
   };
   boxes.forEach(b => b.dataset.id = idOf(b));
   let local = {};

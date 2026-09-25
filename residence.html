@@ -29,7 +29,7 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}
 td,th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left}
 footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 @media print{.tabs{display:none}section{box-shadow:none;break-inside:avoid}}
-.back{position:fixed;right:14px;bottom:18px;z-index:10;background:#44507a;color:#fff;border:none;border-radius:999px;padding:10px 16px;font-size:.95rem;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;font-family:inherit}@media print{.back{display:none}}</style></head><body><div class="wrap">
+.back{position:fixed;right:14px;bottom:18px;z-index:10;background:#44507a;color:#fff;border:none;border-radius:999px;padding:10px 16px;font-size:.95rem;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;font-family:inherit}@media print{.back{display:none}}.step{display:inline-block;font-size:.75rem;padding:1px 8px;border-radius:6px;background:#eee;color:#444;margin-right:6px;vertical-align:1px;font-weight:600}</style></head><body><div class="wrap">
 <button class="back" onclick="if(history.length>1&&document.referrer.indexOf(location.host)>-1){history.back()}else{location.href='./'}">← 上一頁</button>
 <p><a href="./" style="color:#44507a;font-size:.9rem">← 回首頁</a></p>
 <header><h1>依親居留：兩人各自的準備清單</h1>
@@ -40,27 +40,33 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 ③ 良民證和健康檢查都只有 <strong>3 個月</strong>效期，要從送件日往回推時間。</div>
 <nav class="tabs"><a class="t-both" href="#flow">流程</a><a class="t-me" href="#me">【我】臺灣方</a><a class="t-pt" href="#pt">【伴侶】香港方</a><a class="t-next" href="#after">拿到居留後</a><a class="t-warn" href="#settle">定居</a></nav>
 
-<section class="both" id="flow"><h2>辦理順序</h2><p>完整的時間順序和分工，請看 <a href="steps.html">一步一步：從結婚到定居</a>。本頁是文件和規定的詳細說明。</p></section>
+<section class="both" id="flow"><h2>辦理順序</h2><ol style="margin:0;padding-left:1.3em"><li>【伴侶】在香港領良民證推薦函（可和結婚的單身證明驗證同一趟）</li><li>【一起】打電話問移民署服務站：良民證會寄到香港的辦事處，在台送件時要怎麼附</li><li>【伴侶】確定來台日期後，申請良民證</li><li>【我】簽好保證書</li><li>【伴侶】填好居留表格、準備照片</li><li>【我】結婚登記當天申請戶籍謄本</li><li>【伴侶】婚後做居留健康檢查</li><li>【一起】到移民署服務站送依親居留（在台申請居留證 NT$1,000，審查約 5 個工作天，良民證轉寄時間另計）</li><li>【伴侶】領居留證，決定要不要加辦居留入出境證</li></ol><p class="detail" style="margin-top:8px">每一項的細節在下面兩人各自的清單裡，標著相同的步驟數字。</p></section>
 
-<section class="me" id="me"><h2>【我】臺灣方</h2><div class="progress" data-for="me"></div><ul class="check" data-group="me">
-<li><label><input type="checkbox"><span>保證書（大陸地區人民/香港澳門居民專用）<span class="detail">要親自簽名。保證的內容是確認對方身分、負責伴侶居留期間的生活、必要時協助出境</span></span></label></li>
-<li><label><input type="checkbox"><span>國民身分證正本＋影本<span class="detail">正本驗完就歸還。配偶當保證人不用附在職證明</span></span></label></li>
-<li><label><input type="checkbox"><span>登記了配偶資料的戶籍謄本<span class="detail">用來證明婚姻關係，結婚當天申請最方便</span></span></label></li>
-</ul></section>
-
-<section class="pt" id="pt"><h2>【伴侶】香港方</h2><div class="progress" data-for="pt"></div><ul class="check" data-group="pt">
-<li><label><input type="checkbox"><span>入境居留／定居申請書＋照片 1 張<span class="detail">身分證規格的彩色正面照片</span></span></label></li>
-<li><label><input type="checkbox"><span>香港身分證＋特區護照（正本＋影本）</span></label></li>
-<li><label><input type="checkbox"><span>入出境許可證<span class="detail">在台送件時要附上</span></span></label></li>
-<li><label><input type="checkbox"><span>香港良民證（無犯罪紀錄證明書）<span class="detail">涵蓋最近 5 年，3 個月內有效。由警務處直接寄給辦事處，本人拿不到正本。在台送件時怎麼附，要先問服務站</span></span></label></li>
-<li><label><input type="checkbox"><span>健康檢查合格證明<span class="detail">3 個月內有效。項目有胸部 X 光、梅毒血清檢查、麻疹與德國麻疹抗體（或預防接種證明）。在香港做的要經辦事處驗證</span></span></label></li>
-<li><label><input type="checkbox"><span>香港或澳門居民身分確認書<span class="detail">本人親自簽名</span></span></label></li>
-<li><label><input type="checkbox"><span>居留定居申報書（第 7 版）<span class="detail">申報工作經歷，以及有沒有在大陸或港府機構任職</span></span></label></li>
-<li><label><input type="checkbox"><span>書面說明書<span class="tag">視情況</span><span class="detail">申報書中有任職情形時才要附</span></span></label></li>
-<li><label><input type="checkbox"><span>委託書<span class="tag">視情況</span><span class="detail">請別人代送件時才要</span></span></label></li>
+<section class="me" id="me">
+<h2>【我】臺灣方</h2>
+<div class="progress" data-for="me"></div>
+<ul class="check" data-group="me">
+<li><label><input type="checkbox"><span><span class="step">第 4 步</span>下載並親自簽好「港澳居民專用保證書」<span class="detail">移民署網站下載。保證的內容是確認對方身分、負責伴侶居留期間的生活、必要時協助出境</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 6 步</span>結婚登記當天：申請登記了配偶資料的戶籍謄本<span class="detail">用來證明婚姻關係（見結婚文件清單第 12 步）</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 8 步</span>送件當天帶：國民身分證正本＋影本、保證書、戶籍謄本<span class="detail">正本驗完就歸還。配偶當保證人不用附在職證明</span></span></label></li>
 </ul>
-<table style="margin-top:12px"><tr><th>費用</th><th>金額</th></tr>
-<tr><td>在台申請居留證</td><td>NT$1,000</td></tr><tr><td>居留入出境證（可自由出入境）</td><td>NT$2,600</td></tr><tr><td>人在香港申請（參考）</td><td>NT$1,300</td></tr></table></section>
+</section>
+
+<section class="pt" id="pt">
+<h2>【伴侶】香港方</h2>
+<div class="progress" data-for="pt"></div>
+<ul class="check" data-group="pt">
+<li><label><input type="checkbox"><span><span class="step">第 1 步</span>到台北經濟文化辦事處（香港）領良民證推薦函<span class="detail">帶香港身分證，可以和結婚的單身證明驗證同一趟辦（結婚文件清單第 4 步）</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 3 步</span>確定來台日期後，拿推薦函向香港警務處申請良民證<span class="detail">良民證只有 3 個月效期，所以等來台日期確定才申請。網上申請約 15 天，親自遞交最多 28 天。2026-10-12 起 HK$340。證明書會直接寄給辦事處，本人拿不到；收據要留好</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 5 步</span>填好居留表格，準備 1 張身分證規格照片<span class="detail">入境居留申請書、香港或澳門居民身分確認書（本人簽名）、居留定居申報書（第 7 版，申報工作經歷和有沒有在大陸或港府機構任職）</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 5 步</span>書面說明書<span class="tag">視情況</span><span class="detail">申報書中有任職情形時才要附</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 7 步</span>結婚後，到疾管署指定醫院做居留健康檢查<span class="detail">項目有胸部 X 光、梅毒血清檢查、麻疹與德國麻疹抗體（或預防接種證明）。報告 3 個月內有效</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 8 步</span>送件當天帶：護照＋香港身分證（正本＋影本）、入出境許可證、健檢報告、良民證收據、所有表格和照片</span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 8 步</span>委託書<span class="tag">視情況</span><span class="detail">請別人代送件時才要</span></span></label></li>
+<li><label><input type="checkbox"><span><span class="step">第 9 步</span>領居留證，決定要不要加辦居留入出境證<span class="detail">只有居留證的話，每次出入境前都要先申請許可；加辦居留入出境證（NT$2,600）就能直接出入境</span></span></label></li>
+</ul><table style="margin-top:12px"><tr><th>費用</th><th>金額</th></tr>
+<tr><td>在台申請居留證</td><td>NT$1,000</td></tr><tr><td>居留入出境證（可自由出入境）</td><td>NT$2,600</td></tr><tr><td>人在香港申請（參考）</td><td>NT$1,300</td></tr></table>
+</section>
 
 <section class="next" id="after"><h2>拿到居留後</h2><ul>
 <li><b>工作：</b>可以直接工作，不用申請工作許可。需要專業證照的工作，仍要符合各行業規定。</li>
