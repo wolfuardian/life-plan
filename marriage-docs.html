@@ -125,13 +125,6 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 
 <footer>本頁整理自官方公開資料，實際要求以辦理機關當下的規定為準。勾選狀態只存在這台裝置的瀏覽器裡。</footer>
 </div>
-<script>
-const KEY='marriage-checklist-v1';
-const saved=JSON.parse(localStorage.getItem(KEY)||'{}');
-const boxes=[...document.querySelectorAll('ul.check input')];
-boxes.forEach((b,i)=>{b.checked=!!saved[i];b.addEventListener('change',()=>{saved[i]=b.checked;localStorage.setItem(KEY,JSON.stringify(saved));upd();});});
-function upd(){document.querySelectorAll('.progress').forEach(p=>{const g=document.querySelector(`ul[data-group="${p.dataset.for}"]`);const all=g.querySelectorAll('input');const done=[...all].filter(x=>x.checked).length;p.textContent=`已完成 ${done} / ${all.length}`;});}
-upd();
-</script>
+<script src="sync.js"></script>
 </body>
 </html>

@@ -40,21 +40,7 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 ③ 良民證和健康檢查都只有 <strong>3 個月</strong>效期，要從送件日往回推時間。</div>
 <nav class="tabs"><a class="t-both" href="#flow">流程</a><a class="t-me" href="#me">【我】臺灣方</a><a class="t-pt" href="#pt">【伴侶】香港方</a><a class="t-next" href="#after">拿到居留後</a><a class="t-warn" href="#settle">定居</a></nav>
 
-<section class="both" id="flow"><h2>建議流程</h2>
-<p><b>來台前 2～3 個月</b></p><ul class="check" data-group="f1">
-<li><label><input type="checkbox"><span>【伴侶】辦好「無結婚紀錄證明書」並在香港驗證<span class="detail">見結婚文件清單頁</span></span></label></li>
-<li><label><input type="checkbox"><span>【伴侶】親自到台北經濟文化辦事處（香港）領良民證推薦函<span class="detail">帶香港身分證。地址是灣仔港灣道 18 號中環廣場 49 樓 4907-08 室</span></span></label></li>
-<li><label><input type="checkbox"><span>【伴侶】線上申請入出境許可證（不要用網簽）<span class="detail">單次 NT$600，有效 6 個月。官方寫 5 個工作天，辦事處建議提前 1～2 個月送件。核准後 30 日內要線上繳費。入境後停留 3 個月，可延 1 次 3 個月</span></span></label></li>
-<li><label><input type="checkbox"><span>【伴侶】從預計送件日往回推 3～4 週，向香港警務處申請良民證<span class="detail">網上申請約 15 天，親自遞交最多 28 天。2026-10-12 起費用是 HK$340。證明書會直接寄給辦事處</span></span></label></li>
-<li><label><input type="checkbox"><span>【我】簽好保證書，並向戶政所確認結婚登記文件</span></label></li>
-</ul>
-<p><b>結婚當天</b></p><ul class="check" data-group="f2">
-<li><label><input type="checkbox"><span>一起到戶政事務所辦結婚登記<span class="detail">順便申請登記了配偶資料的戶籍謄本</span></span></label></li>
-</ul>
-<p><b>婚後，在停留期間內</b></p><ul class="check" data-group="f3">
-<li><label><input type="checkbox"><span>【伴侶】到疾管署指定醫院做居留健康檢查</span></label></li>
-<li><label><input type="checkbox"><span>帶齊文件，到移民署服務站送依親居留<span class="detail">審查約 5 個工作天，良民證轉寄時間另計。送件時問清楚要不要一起辦居留入出境證</span></span></label></li>
-</ul></section>
+<section class="both" id="flow"><h2>辦理順序</h2><p>完整的時間順序和分工，請看 <a href="steps.html">一步一步：從結婚到定居</a>。本頁是文件和規定的詳細說明。</p></section>
 
 <section class="me" id="me"><h2>【我】臺灣方</h2><div class="progress" data-for="me"></div><ul class="check" data-group="me">
 <li><label><input type="checkbox"><span>保證書（大陸地區人民/香港澳門居民專用）<span class="detail">要親自簽名。保證的內容是確認對方身分、負責伴侶居留期間的生活、必要時協助出境</span></span></label></li>
@@ -102,11 +88,4 @@ footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 <p><a href="https://www.immigration.gov.tw/5385/7244/7250/7296/%E5%AE%9A%E5%B1%85/41965/">移民署：港澳居民定居</a></p>
 </div></section>
 <footer>本頁整理自官方公開資料，實際要求以辦理機關當下的規定為準。勾選狀態只存在這台裝置的瀏覽器裡。</footer>
-</div><script>
-const KEY='residence-checklist-v1';
-const saved=JSON.parse(localStorage.getItem(KEY)||'{}');
-const boxes=[...document.querySelectorAll('ul.check input')];
-boxes.forEach((b,i)=>{b.checked=!!saved[i];b.addEventListener('change',()=>{saved[i]=b.checked;localStorage.setItem(KEY,JSON.stringify(saved));upd();});});
-function upd(){document.querySelectorAll('.progress').forEach(p=>{const g=document.querySelector(`ul[data-group="${p.dataset.for}"]`);const all=g.querySelectorAll('input');const done=[...all].filter(x=>x.checked).length;p.textContent=`已完成 ${done} / ${all.length}`;});}
-upd();
-</script></body></html>
+</div><script src="sync.js"></script></body></html>
