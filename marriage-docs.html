@@ -33,10 +33,12 @@ table{width:100%;border-collapse:collapse;font-size:.92rem}
 td,th{border-bottom:1px solid var(--line);padding:6px 4px;text-align:left}
 footer{color:var(--mute);font-size:.8rem;margin-top:30px}
 @media print{.tabs{display:none}section{box-shadow:none;break-inside:avoid}}
-</style>
+.back{position:fixed;left:14px;bottom:18px;z-index:10;background:#44507a;color:#fff;border:none;border-radius:999px;padding:10px 16px;font-size:.95rem;box-shadow:0 2px 8px rgba(0,0,0,.2);cursor:pointer;font-family:inherit}@media print{.back{display:none}}</style>
 </head>
 <body>
 <div class="wrap">
+<button class="back" onclick="if(history.length>1&&document.referrer.indexOf(location.host)>-1){history.back()}else{location.href='./'}">← 上一頁</button>
+<p><a href="./" style="color:#44507a;font-size:.9rem">← 回首頁</a></p>
 <header>
 <h1>在台結婚登記：應備文件清單</h1>
 <p>臺灣人 × 香港永久居民｜查證日期 2026-09-25｜依內政部《戶政事務所辦理結婚登記作業規定》（2025-11-14 修正）</p>
