@@ -6,7 +6,7 @@ const SYNC_URL = 'https://script.google.com/macros/s/AKfycbz5veLASgbL_BTn7BaUJE-
   const boxes = [...document.querySelectorAll('ul.check input[type=checkbox]')];
   const idOf = b => {
     const lab = b.closest('label').cloneNode(true);
-    lab.querySelectorAll('.step,.detail,.tag,input').forEach(x => x.remove());
+    lab.querySelectorAll('.step,.detail,.tag,.who,input').forEach(x => x.remove());
     return lab.textContent.replace(/\s+/g,' ').trim().slice(0,80);
   };
   boxes.forEach(b => b.dataset.id = idOf(b));
